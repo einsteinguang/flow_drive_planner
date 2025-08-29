@@ -1,0 +1,12 @@
+flow_drive:
+  _target_: flow_drive.planner.planner.FlowDrivePlannerWrapper
+  _convert_: "all"
+
+  device: cuda
+  ckpt_path: ???
+  mlflow_exp_name: ???
+  load_run_name: ???
+  load_epoch: ???
+  post_mode: ???
+  render: False
+  video_dir: None

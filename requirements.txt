@@ -1,0 +1,14 @@
+torch
+torchvision
+pytorch_lightning==2.0.1
+tensorboard==2.11.2
+timm==1.0.10
+mlflow
+catalyst
+diffusers
+config-box
+python-box
+wandb
+mmengine
+seaborn
+imageio[ffmpeg]

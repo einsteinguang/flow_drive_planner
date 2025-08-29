@@ -1,0 +1,60 @@
+data_processing:  # do not change
+  data_original_path: "/path/to/nuplan-v1.1/splits/trainval"
+  map_original_path: "/path/to/maps"
+  data_processed_path: "/path/to/already/saved/processed/data"
+  data_processed_list:  "/path/to/already/saved/processed/data/scenarios_training.json"  # under the same folder as in the processed data
+  normalization_file_path: "/path/to/normalization.json"        # better provide absolute path to flow_drive/config/normalization.json
+  ego_future_clusters_path: "/path/to/ego_future_clusters.pkl"  # better provide absolute path to flow_drive/config/ego_future_clusters.pkl
+  agent_num: 32
+  static_objects_num: 5
+  predicted_neighbor_num: 10
+  lane_num: 70
+  lane_len: 20  # number of lane points
+  route_len: 20  # number of route points
+  route_num: 70
+  past_time_horizon: 2  # with 10 hz
+  future_time_horizon: 4  # with 10 hz
+  augment_prob: 0.8
+  augment_mode: "uniform"  # "uniform" or "truncated_gaussian"
+  # sampling weights for scenarios
+  weighted_sampling: True
+  balance_mode: "cluster"  # "scenario_type" or "cluster"
+
+encoder:
+  agent_num: 32
+  static_objects_num: 5
+  lane_num: 70
+  hidden_dim: 192
+  encoder_depth: 3
+  num_heads: 6
+  time_len: 21
+  lane_len: 20  # number of lane points
+  static_objects_state_dim: 10
+  encoder_drop_path_rate: 0.1
+  decoder_drop_path_rate: 0.1
+
+diffuser:
+  pred_horizon: 40
+  timesteps_sampling_mode: "uniform"  # "uniform" or "lognorm"
+  n_blocks: 3
+  hidden_dim: 192
+  num_heads: 6
+  dropout: 0.1
+
+inference:
+  flow_train_iter: 2000
+  flow_inference_iter: 8
+  prediction_type: "epsilon"
+  variance_type: "fixed_small"
+
+train:
+  seed: 33
+  num_workers: 16
+  pin_memory: True
+  persistent_workers: True
+  batch_size: 350
+  num_epochs: 400
+  ema_power: 0.99
+  warmup_steps: 1500
+  learning_rate: 0.0002
+  weight_decay: 0.00001
