@@ -1,5 +1,5 @@
 ## Demo Figures & Videos
-All demonstration GIFs (exported from the closed-loop simulator) are located under `flow_drive_planner/videos/*/*.gif` and correspond to figures in the paper. They are grouped below so they render directly on GitHub.
+All demonstration GIFs correspond to figures in the paper.
 
 ### Figure 7: Challenging Scenarios on nuPlan (Rows 1–4)
 | Row 1 | Row 2 |
