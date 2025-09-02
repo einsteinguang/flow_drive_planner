@@ -30,5 +30,7 @@ find_available_port() {
 MASTER_PORT=$(find_available_port | tail -n 1)
 echo "Using master port: $MASTER_PORT"
 
+python prepare_dataset_weights.py
+
 # Run the training script
 CUDA_VISIBLE_DEVICES=$GPU_IDS torchrun --nproc_per_node=$NUM_GPUS --master_port=$MASTER_PORT train_flow_model.py

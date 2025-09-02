@@ -219,4 +219,9 @@ def train_gpu_adaptive(params: ConfigBox):
 if __name__ == "__main__":
     params_path = "flow_drive/config/config.yaml"
     params = load_params(params_path)
+
+    # Create training dataloader once to initializing the weights computation
+    dataloader = training_dataloader(params, device='cpu')
+
+    # Now start training
     train_gpu_adaptive(params)  # GPU-adaptive training function for consistent results across different GPU counts
