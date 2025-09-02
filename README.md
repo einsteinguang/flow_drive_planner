@@ -1,5 +1,27 @@
-## Demo Videos
-All videos locate in `flow_drive_planner/videos`
+## Demo Figures & Videos
+All demonstration GIFs (exported from the closed-loop simulator) are located under `flow_drive_planner/videos/*/*.gif` and correspond to figures in the paper. They are grouped below so they render directly on GitHub.
+
+### Figure 7: Challenging Scenarios on nuPlan (Rows 1–4)
+| Row 1 | Row 2 |
+|:-----:|:-----:|
+| ![Fig7 Row1](videos/challenging_scenarios/Fig7_row1.gif) | ![Fig7 Row2](videos/challenging_scenarios/Fig7_row2.gif) |
+| Row 3 | Row 4 |
+| ![Fig7 Row3](videos/challenging_scenarios/Fig7_row3.gif) | ![Fig7 Row4](videos/challenging_scenarios/Fig7_row4.gif) |
+
+### Figure 8: Challenging Scenarios on InterPlan (Rows 1–2)
+| Row 1 | Row 2 |
+|:-----:|:-----:|
+| ![Fig8 Row1](videos/challenging_scenarios/Fig8_row1.gif) | ![Fig8 Row2](videos/challenging_scenarios/Fig8_row2.gif) |
+
+### Figure 9a: FlowDrive vs. FlowDrive* (lane change to follow route)
+| Row 1 | Row 2 |
+|:-----:|:-----:|
+| ![Fig9a Row1](videos/lane_change/Fig9a_row1.gif) | ![Fig9a Row2](videos/lane_change/Fig9a_row2.gif) |
+
+### Figure 9b: FlowDrive vs. FlowDrive* (overtake)
+| Row 1 | Row 2 |
+|:-----:|:-----:|
+| ![Fig9b Row1](videos/overtake/Fig9b_row1.gif) | ![Fig9b Row2](videos/overtake/Fig9b_row2.gif) |
 
 ## Getting Started
 
