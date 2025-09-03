@@ -11,7 +11,7 @@ data_processing:  # do not change
   lane_num: 70
   lane_len: 20  # number of lane points
   route_len: 20  # number of route points
-  route_num: 70
+  route_num: 25
   past_time_horizon: 2  # with 10 hz
   future_time_horizon: 4  # with 10 hz
   augment_prob: 0.8

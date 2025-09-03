@@ -50,7 +50,7 @@ if __name__ == "__main__":
     parser.add_argument('--lane_num', type=int, help='number of lanes', default=70)
 
     parser.add_argument('--route_len', type=int, help='number of route lane point', default=20)
-    parser.add_argument('--route_num', type=int, help='number of route lanes', default=70)
+    parser.add_argument('--route_num', type=int, help='number of route lanes', default=25)
     args = parser.parse_args()
 
     # create save folder
