@@ -1,4 +1,4 @@
-data_processing:  # do not change
+data_processing:
   data_original_path: "/path/to/nuplan-v1.1/splits/trainval"
   map_original_path: "/path/to/maps"
   data_processed_path: "/path/to/already/saved/processed/data"
