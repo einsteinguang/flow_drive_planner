@@ -1,3 +1,15 @@
+<div align="center">
+    <h2>FlowDrive:<br/>moderated flow matching with data balancing for trajectory planning
+    <br/>
+    <br/>
+    <a href="https://arxiv.org/abs/2509.21961"><img src='https://img.shields.io/badge/arXiv-Page-aff'></a>
+    </h2>
+</div>
+
+## News <a name="news"></a>
+- **`2026/02/17`** Initial code release
+- **`2025/09/26`** FlowDrive [paper](https://arxiv.org/abs/2509.21961) published on arXiv.
+
 ## Demo Figures & Videos
 All demonstration GIFs correspond to figures in the paper.
 
@@ -12,16 +24,6 @@ All demonstration GIFs correspond to figures in the paper.
 | Row 1 | Row 2 |
 |:-----:|:-----:|
 | ![Fig8 Row1](videos/challenging_scenarios/Fig8_row1.gif) | ![Fig8 Row2](videos/challenging_scenarios/Fig8_row2.gif) |
-
-### Figure 9a: FlowDrive vs. FlowDrive* (lane change to follow route)
-| Row 1 | Row 2 |
-|:-----:|:-----:|
-| ![Fig9a Row1](videos/lane_change/Fig9a_row1.gif) | ![Fig9a Row2](videos/lane_change/Fig9a_row2.gif) |
-
-### Figure 9b: FlowDrive vs. FlowDrive* (overtake)
-| Row 1 | Row 2 |
-|:-----:|:-----:|
-| ![Fig9b Row1](videos/overtake/Fig9b_row1.gif) | ![Fig9b Row2](videos/overtake/Fig9b_row2.gif) |
 
 ## Getting Started
 
@@ -86,6 +88,24 @@ chmod +x data_process.sh
 ```bash
 chmod +x train.sh
 ./train.sh 0,1,2,3,4,5,6,7  # specify the GPU ids
+```
+
+## License <a name="license"></a>
+
+All assets and code are under the [Apache 2.0 license](./LICENSE) unless specified otherwise.
+
+## Citation <a name="citation"></a>
+If you find this work useful, please consider citing:
+```bibtex
+@article{wang2025flowdrivemoderatedflowmatching,
+      title={FlowDrive: moderated flow matching with data balancing for trajectory planning}, 
+      author={Lingguang Wang and Ömer Şahin Taş and Marlon Steiner and Christoph Stiller},
+      year={2025},
+      eprint={2509.21961},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2509.21961}, 
+}
 ```
 
 ## Acknowledgement
