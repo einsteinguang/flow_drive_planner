@@ -37,3 +37,14 @@ dependencies = [
 where = ["."]
 include = ["flow_drive*"]
 
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"flow_drive" = [
+    "**/*.json",
+    "**/*.pkl",
+    "**/*.pth",
+    "**/*.yaml"
+]
+
