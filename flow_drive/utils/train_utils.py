@@ -15,11 +15,24 @@ from diffusers.schedulers.scheduling_flow_match_euler_discrete import \
     FlowMatchEulerDiscreteScheduler
 
 
+_CONFIG_DIR = os.path.join(os.path.dirname(__file__), "..", "config")
+
+
+def _resolve_default_paths(params):
+    """Resolve null config paths to package-bundled defaults."""
+    dp = params.data_processing
+    if not dp.get("normalization_file_path"):
+        dp.normalization_file_path = os.path.join(_CONFIG_DIR, "normalization.json")
+    if not dp.get("ego_future_clusters_path"):
+        dp.ego_future_clusters_path = os.path.join(_CONFIG_DIR, "ego_future_clusters.pkl")
+    return params
+
+
 def load_params(params_file):
     with open(params_file, "r") as f:
         params = yaml.safe_load(f)
         params = ConfigBox(params)
-    return params
+    return _resolve_default_paths(params)
 
 
 def load_logged_parameters(experiment_name: str, run_name: str):
