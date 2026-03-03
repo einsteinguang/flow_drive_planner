@@ -3,8 +3,8 @@ data_processing:
   map_original_path: "/path/to/maps"
   data_processed_path: "/path/to/already/saved/processed/data"
   data_processed_list:  "/path/to/already/saved/processed/data/scenarios_training.json"  # under the same folder as in the processed data
-  normalization_file_path: "/path/to/normalization.json"        # better provide absolute path to flow_drive/config/normalization.json
-  ego_future_clusters_path: "/path/to/ego_future_clusters.pkl"  # better provide absolute path to flow_drive/config/ego_future_clusters.pkl
+  normalization_file_path: null   # defaults to bundled flow_drive/config/normalization.json
+  ego_future_clusters_path: null  # defaults to bundled flow_drive/config/ego_future_clusters.pkl
   agent_num: 32
   static_objects_num: 5
   predicted_neighbor_num: 10
