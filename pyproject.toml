@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flow_drive"
+version = "1.0.0"
+description = ""
+requires-python = ">=3.9"
+authors = [
+    { name = "anonymous" }
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Operating System :: OS Independent",
+    "License :: Free for non-commercial use"
+]
+dependencies = [
+    "catalyst>=22.4",
+    "config-box>=0.2.1600119743",
+    "diffusers>=0.36.0",
+    "imageio[ffmpeg]>=2.37.2",
+    "mlflow>=3.1.4",
+    "mmengine>=0.10.7",
+    "python-box>=7.3.2",
+    "pytorch-lightning==2.0.1",
+    "seaborn>=0.13.2",
+    "tensorboard==2.11.2",
+    "timm==1.0.10",
+    "torch>=2.8.0",
+    "torchvision>=0.23.0",
+    "wandb>=0.24.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["flow_drive*"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"flow_drive" = [
+    "**/*.json",
+    "**/*.pkl",
+    "**/*.pth",
+    "**/*.yaml"
+]
+
