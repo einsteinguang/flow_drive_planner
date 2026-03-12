@@ -61,7 +61,7 @@ python -m pip install -e .
 
 #### setup FlowDrive Planner
 ```bash
-cd flow_drive_planner && python -m pip install -r requirements.txt
+cd flow_drive_planner
 python -m pip install -e .
 ```
 
